@@ -1,0 +1,90 @@
+/* Adaptation pour pages projets
+------------------------------------------- */
+
+/* ---------- Global layout ---------- */
+body {
+  background: #000;
+  max-width: 900px;
+  margin: auto;
+  padding: 3rem 2rem;
+}
+
+/* Réduction des espaces entre sections */
+section {
+  padding: 6rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ---------- Header ---------- */
+.project-header {
+  text-align: center;
+  padding: 6rem 0 4rem;
+}
+
+.project-header h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  color: var(--white);
+}
+
+.project-date {
+  font-size: 1.8rem;
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+
+/* ---------- Titres ---------- */
+h2 {
+  font-size: 3.4rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Paragraphes ---------- */
+p, li {
+  font-size: 2rem;
+  line-height: 1.6;
+  max-width: 750px;
+}
+
+/* ---------- Images ---------- */
+.project-process img,
+.project-overview img {
+  width: 100%;
+  margin: 2rem 0;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ---------- Listes ---------- */
+ul {
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 1rem;
+  list-style-type: square;
+}
+
+/* ---------- Lien externe ---------- */
+a {
+  color: var(--pink);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* ---------- Footer bouton ---------- */
+footer {
+  text-align: center;
+  padding: 5rem 0 2rem;
+}
