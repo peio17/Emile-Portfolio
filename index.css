@@ -405,7 +405,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .header {
     /*background: linear-gradient(rgba(0,0,0, .3), rgba(0,0,0, .7)), */
-    background: rgba(0,0,0, 0.7),
+    background: rgba(0,0,0, 0.5),
         url('./images/fondPortfolio.jpg');
     height: 100vh;
     background-size: cover;
