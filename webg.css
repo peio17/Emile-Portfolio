@@ -18,7 +18,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 :root {
@@ -54,7 +54,6 @@
 
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
@@ -154,22 +153,29 @@ img {
 /* IMAGE ROW FOR SIDE-BY-SIDE -------------------- */
 .image-row {
     display: flex;
-    flex-wrap: wrap;            /* pour passer à la ligne si écran trop petit */
-    gap: 2rem;                  /* espace entre les images */
-    justify-content: center;    /* centre horizontalement les images */
+    flex-wrap: wrap;            
+    gap: 1rem;                  /* espace réduit entre les images */
+    justify-content: center;    
     margin-bottom: var(--gutter-medium);
 }
 
 .image-row img {
-    max-width: 45%;              /* chaque image prend 45% du conteneur */
+    width: calc(50% - 0.5rem);  /* chaque image prend ~50% de l'espace moins le gap */
     height: auto;
     border-radius: 8px;
+    margin: 0;                   /* supprime marges verticales */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.image-row img:hover {
+    transform: scale(1.03);      /* léger zoom au hover */
+    box-shadow: 0 4px 20px rgba(255, 50, 88, 0.4);
 }
 
 /* Responsive pour mobile */
 @media (max-width: 500px) {
     .image-row img {
-        max-width: 100%;         /* une image par ligne sur petit écran */
+        width: 100%;             
         margin-bottom: var(--gutter-small);
     }
 }
