@@ -145,8 +145,33 @@ li {
 img {
     object-fit: contain;
     max-width: 100%;
+    height: auto;
     border-radius: 8px;
     margin: var(--gutter-small) 0;
+}
+
+/* -------------------- */
+/* IMAGE ROW FOR SIDE-BY-SIDE -------------------- */
+.image-row {
+    display: flex;
+    flex-wrap: wrap;            /* pour passer à la ligne si écran trop petit */
+    gap: 2rem;                  /* espace entre les images */
+    justify-content: center;    /* centre horizontalement les images */
+    margin-bottom: var(--gutter-medium);
+}
+
+.image-row img {
+    max-width: 45%;              /* chaque image prend 45% du conteneur */
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 500px) {
+    .image-row img {
+        max-width: 100%;         /* une image par ligne sur petit écran */
+        margin-bottom: var(--gutter-small);
+    }
 }
 
 /* -------------------- */
@@ -245,4 +270,5 @@ footer {
         font-size: var(--font-size-medium);
     }
 }
+
 
